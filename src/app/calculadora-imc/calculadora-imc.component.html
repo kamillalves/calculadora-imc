@@ -1,0 +1,28 @@
+
+<div class="container">
+
+  <div class="title"> Calculadora - IMC</div>
+
+  <form [formGroup]="form" class="form">
+
+    <div class="input">
+      <label>Nome:</label>
+      <input placeholder="Ex: Maria" formControlName="nome" type="text" id='nome'>
+    </div>
+
+    <div class="input">
+      <label>Altura:</label>
+      <input placeholder="Ex: 1,50" formControlName="altura" type="number" id='altura'>
+    </div>
+
+    <div class="input">
+      <label>Peso:</label>
+      <input placeholder="Ex: 50" formControlName="peso" type="number" id='peso'>
+    </div>
+
+    <button (click)="calcular()" id='calcular'>Calcular</button>
+
+  </form>
+
+  <div class="result" id='resultado'>{{ form.value?.resultado}}</div>
+</div>
